@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habit Tracker - Build Better Habits</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="app-title">
+                    <i class="fas fa-chart-line"></i>
+                    Habit Tracker
+                </h1>
+                <p class="app-subtitle">Build better habits, one day at a time</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Add Habit Section -->
+            <section class="add-habit-section">
+                <div class="add-habit-card">
+                    <h2>Add New Habit</h2>
+                    <form id="habit-form" class="habit-form">
+                        <div class="form-group">
+                            <input type="text" id="habit-name" placeholder="Enter habit name" required>
+                        </div>
+                        <div class="form-group">
+                            <div class="custom-select">
+                                <select id="habit-category">
+                                    <option value="health">Health & Fitness</option>
+                                    <option value="productivity">Productivity</option>
+                                    <option value="learning">Learning</option>
+                                    <option value="mindfulness">Mindfulness</option>
+                                    <option value="social">Social</option>
+                                    <option value="creative">Creative</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="select-icon">
+                                    <img id="selected-category-icon" src="assets/icons/health.svg" alt="category icon" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <select id="habit-frequency">
+                                <option value="daily">Daily</option>
+                                <option value="weekly">Weekly</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary">
+                            <i class="fas fa-plus"></i>
+                            Add Habit
+                        </button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="stats-section">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-fire"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number" id="total-habits">0</div>
+                            <div class="stat-label">Total Habits</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number" id="completed-today">0</div>
+                            <div class="stat-label">Completed Today</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-number" id="best-streak">0</div>
+                            <div class="stat-label">Best Streak</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Habits List -->
+            <section class="habits-section">
+                <div class="section-header">
+                    <h2>Your Habits</h2>
+                    <div class="view-toggle">
+                        <button id="daily-view" class="view-btn active">Daily</button>
+                        <button id="weekly-view" class="view-btn">Weekly</button>
+                    </div>
+                </div>
+                <div id="habits-container" class="habits-container">
+                    <div class="empty-state">
+                        <div class="empty-icon">
+                            <i class="fas fa-seedling"></i>
+                        </div>
+                        <h3>No habits yet</h3>
+                        <p>Start building better habits by adding your first one above!</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Edit Habit Modal -->
+        <div id="edit-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Edit Habit</h3>
+                    <button class="close-btn" id="close-modal">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <form id="edit-habit-form" class="habit-form">
+                    <div class="form-group">
+                        <input type="text" id="edit-habit-name" placeholder="Enter habit name" required>
+                    </div>
+                    <div class="form-group">
+                        <div class="custom-select">
+                            <select id="edit-habit-category">
+                                <option value="health">Health & Fitness</option>
+                                <option value="productivity">Productivity</option>
+                                <option value="learning">Learning</option>
+                                <option value="mindfulness">Mindfulness</option>
+                                <option value="social">Social</option>
+                                <option value="creative">Creative</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="select-icon">
+                                <img id="edit-selected-category-icon" src="assets/icons/health.svg" alt="category icon" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <select id="edit-habit-frequency">
+                            <option value="daily">Daily</option>
+                            <option value="weekly">Weekly</option>
+                        </select>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn-secondary" id="cancel-edit">Cancel</button>
+                        <button type="submit" class="btn-primary">Save Changes</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
