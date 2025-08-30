@@ -1,14 +1,22 @@
 # 🎯 Habit Tracker Web Application
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen.svg)](https://mutlukurt.github.io/habit-tracker-webapp)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen.svg)](https://mutlukurt.github.io/habit-tracker-webapp/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow.svg)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![CSS3](https://img.shields.io/badge/CSS3-Modern-blue.svg)](https://developer.mozilla.org/en-US/docs/Web/CSS)
 [![Responsive](https://img.shields.io/badge/Responsive-Mobile%20First-green.svg)](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout)
 
 A modern, responsive habit tracking web application built with vanilla JavaScript. Features professional UI design, premium SVG icons, and comprehensive progress tracking capabilities.
 
-![Habit Tracker Screenshot](https://via.placeholder.com/800x400/9381ff/ffffff?text=Habit+Tracker+Web+App)
+## 🚀 **Live Demo**
+
+**Try the application now:** [https://mutlukurt.github.io/habit-tracker-webapp/](https://mutlukurt.github.io/habit-tracker-webapp/)
+
+Experience the full-featured habit tracker with:
+- ✨ Interactive habit creation and management
+- 📊 Real-time progress tracking
+- 🎨 Premium SVG icons for all categories
+- 📱 Fully responsive design on all devices
 
 ## 🏗️ Project Structure
 
