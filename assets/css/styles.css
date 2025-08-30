@@ -11,6 +11,7 @@
     --text-primary: #2d3748;
     --text-secondary: #4a5568;
     --text-muted: #718096;
+    --text-dark: #1a202c;
     --success: #48bb78;
     --warning: #ed8936;
     --error: #f56565;
@@ -55,9 +56,9 @@
 }
 
 body {
-    font-family: var(--font-family);
-    background: linear-gradient(135deg, var(--ghost-white) 0%, var(--antique-white) 100%);
-    color: var(--text-primary);
+    font-family: var(--font-family), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, var(--ghost-white, #f8f7ff) 0%, var(--antique-white, #ffeedd) 100%);
+    color: var(--text-primary, #2d3748);
     line-height: 1.6;
     min-height: 100vh;
 }
@@ -83,22 +84,26 @@ body {
 .app-title {
     font-size: var(--font-size-3xl);
     font-weight: 700;
-    color: var(--tropical-indigo);
+    color: var(--tropical-indigo) !important;
     margin-bottom: var(--spacing-sm);
     display: flex;
     align-items: center;
     justify-content: center;
     gap: var(--spacing-md);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .app-title i {
     font-size: var(--font-size-2xl);
+    color: var(--tropical-indigo) !important;
 }
 
 .app-subtitle {
     font-size: var(--font-size-lg);
-    color: var(--text-secondary);
+    color: var(--text-secondary) !important;
     font-weight: 400;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    opacity: 1;
 }
 
 /* Main Content */
@@ -130,9 +135,10 @@ body {
 .add-habit-card h2 {
     font-size: var(--font-size-xl);
     font-weight: 600;
-    color: var(--text-primary);
+    color: var(--text-primary) !important;
     margin-bottom: var(--spacing-lg);
     text-align: center;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .habit-form {
@@ -346,7 +352,8 @@ body {
 .section-header h2 {
     font-size: var(--font-size-2xl);
     font-weight: 600;
-    color: var(--text-primary);
+    color: var(--text-primary) !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .view-toggle {
@@ -702,14 +709,17 @@ body {
 .empty-state h3 {
     font-size: var(--font-size-xl);
     font-weight: 600;
-    color: var(--text-secondary);
+    color: var(--text-secondary) !important;
     margin-bottom: var(--spacing-sm);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
 .empty-state p {
     font-size: var(--font-size-base);
     max-width: 400px;
     margin: 0 auto;
+    color: var(--text-muted) !important;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
 /* Modal */
@@ -950,6 +960,18 @@ body {
         --text-secondary: #e2e8f0;
         --text-muted: #a0aec0;
     }
+}
+
+/* Text visibility fix */
+h1, h2, h3, h4, h5, h6, p, span, div, label {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+.app-title, .app-subtitle, .section-header h2, .add-habit-card h2, .empty-state h3, .empty-state p {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
 }
 
 /* Reduced motion support */
